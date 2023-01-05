@@ -1,0 +1,4987 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.5s ease-in-out;
+  scrollbar-color: #6969dd #e0e0e0;
+  /* -webkit-touch-callout: none;
+  -webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; */
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Comfortaa", cursive;
+  line-height: 1;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#scroll::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f9f9fd;
+}
+
+#scroll::-webkit-scrollbar-thumb {
+  background-color: rgb(72, 178, 130);
+}
+
+#scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9fd;
+}
+
+header {
+  width: 100%;
+  flex: 0 0 auto;
+  background: rgb(72, 178, 130);
+  box-shadow: 0px 1px 5px rgba(91, 201, 151);
+  padding: 15px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  font-size: 22px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 1;
+}
+
+button {
+  font-family: "Comfortaa", cursive;
+}
+
+.logo-mobile * {
+  width: 0%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header:after,
+.container:after,
+footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  padding: 0 15px;
+}
+
+.logo {
+  display: block;
+  float: left;
+}
+.logo span {
+  color: white;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  margin: 5px 0;
+  text-align: center;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+#menu {
+  float: right;
+}
+#menu li {
+  display: inline-block;
+  margin-right: 30px;
+  margin-top: 2%;
+}
+#menu a {
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 600;
+  display: block;
+  line-height: 40px;
+}
+#menu a:hover {
+  background-color: rgba(91, 201, 151, 0.225);
+}
+#menu li:last-child {
+  margin-right: 0;
+}
+
+.nav-toggle {
+  display: none;
+  position: relative;
+  float: right;
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  background: rgb(72, 178, 130);
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  position: absolute;
+  top: 19px;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background: white;
+}
+.nav-toggle span:before,
+.nav-toggle span:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+.nav-toggle span:before {
+  top: -10px;
+}
+.nav-toggle span:after {
+  bottom: -10px;
+}
+
+#menu.active {
+  max-height: 200px;
+}
+
+.void {
+  height: 80px;
+}
+
+.main-bg {
+  width: 100%;
+  height: 800px;
+}
+
+.main-bg1 {
+  width: 0;
+}
+.page1-text1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  font-size: 40px;
+  color: rgb(72, 178, 130);
+}
+
+.page1-text2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  font-size: 40px;
+  color: rgb(72, 178, 130);
+}
+
+.main-page-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.title-name {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  width: 700px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(91, 201, 151);
+}
+
+.image-block {
+  width: 700px;
+  height: 500px;
+}
+
+.goods {
+  display: flex;
+  margin-left: -25px;
+  margin-top: 25px;
+}
+
+.card {
+  position: relative;
+  margin: 5px 20px;
+  margin-top: 10px;
+  margin-left: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-color: rgb(72, 178, 130);
+  border-style: solid;
+  border-width: 0.1pc;
+  padding: 4px;
+  width: 328px;
+  height: 250px;
+}
+
+.cotl-goods {
+  display: flex;
+  margin-left: -25px;
+  margin-top: -35px;
+}
+
+.card:hover {
+  box-shadow: 0px 1px 2px 0px rgb(72, 178, 130),
+    1px 2px 4px 0px rgb(72, 178, 130), 2px 4px 8px 0px rgb(72, 178, 130),
+    2px 4px 16px 0px rgb(72, 178, 130);
+  border-width: 0.1pc;
+}
+
+.card button {
+  position: absolute;
+  bottom: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: table;
+  background-color: rgb(72, 178, 130);
+  border-color: rgb(72, 178, 130);
+  border-width: 1px;
+  border-radius: 6px;
+  height: 30px;
+  width: 320px;
+  cursor: pointer;
+}
+.card button:active {
+  background-color: rgba(91, 201, 151);
+  border-color: rgba(91, 201, 151);
+  transition: color 0s;
+}
+.card button:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+.card p {
+  display: inline-flex;
+  user-select: text;
+  left: 10px;
+  top: 190px;
+  font-size: 18px;
+  position: absolute;
+  text-align: center;
+}
+.card img {
+  display: block;
+  display: inline-flex;
+  width: 300px;
+  height: 140px;
+}
+
+.card a {
+  font-family: "Comfortaa", cursive;
+  text-decoration: none;
+  color: white;
+}
+
+.card-cotl {
+  position: relative;
+  margin: 5px 20px;
+  margin-left: 25px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-color: rgb(72, 178, 130);
+  border-style: solid;
+  border-width: 0.1pc;
+  padding: 15px;
+  width: 328px;
+  height: 530px;
+}
+
+.card-cotl:hover {
+  box-shadow: 0px 1px 2px 0px rgb(72, 178, 130),
+    1px 2px 4px 0px rgb(72, 178, 130), 2px 4px 8px 0px rgb(72, 178, 130),
+    2px 4px 16px 0px rgb(72, 178, 130);
+  border-width: 0.1pc;
+}
+
+.card-cotl button {
+  position: absolute;
+  bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: table;
+  background-color: rgb(72, 178, 130);
+  border-color: rgb(72, 178, 130);
+  border-width: 1px;
+  border-radius: 6px;
+  height: 30px;
+  width: 300px;
+  cursor: pointer;
+}
+.card-cotl button:active {
+  background-color: rgba(91, 201, 151);
+  border-color: rgba(91, 201, 151);
+  transition: color 0s;
+}
+.card-cotl button:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+.card-cotl p {
+  display: inline-flex;
+  user-select: text;
+  left: 13px;
+  margin-top: 440px;
+  position: absolute;
+  text-align: center;
+}
+.card-cotl img {
+  display: block;
+  display: inline-flex;
+  width: 275px;
+  height: 410px;
+}
+
+.card-cotl a {
+  font-family: "Comfortaa", cursive;
+  text-decoration: none;
+  color: white;
+}
+
+.char {
+  display: flex;
+}
+
+.wdd {
+  display: flex;
+}
+
+.image img {
+  margin-top: 80px;
+  width: 900px;
+  height: 800px;
+}
+
+.prices-main img {
+  margin-top: 80px;
+  width: 900px;
+  height: 800px;
+}
+
+.prices-main {
+  font-size: 30px;
+  margin-top: 110px;
+}
+
+.discription {
+  font-size: 26px;
+  color: rgb(72, 178, 130);
+}
+
+.prices-main a {
+  font-family: "Comfortaa", cursive;
+  text-decoration: none;
+  color: white;
+}
+
+.prices-main button {
+  font-family: "Comfortaa", cursive;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  width: 300px;
+  margin-top: 100px;
+  height: 50px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgb(72, 178, 130);
+  border-color: rgb(72, 178, 130);
+  border-width: 1px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.prices-main button:active {
+  background-color: rgba(91, 201, 151);
+  border-color: rgba(91, 201, 151);
+  transition: color 0s;
+}
+.prices-main button:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.brands-cond p {
+  font-family: "Comfortaa", cursive;
+  color: rgb(72, 178, 130);
+  font-size: 30px;
+  margin-left: 32%;
+  margin-top: 7%;
+}
+
+.brand-card {
+  position: relative;
+  margin: 5px 5px;
+  margin-top: 2%;
+  margin-left: 2%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-color: rgb(72, 178, 130);
+  border-style: solid;
+  border-width: 0.1pc;
+  padding: 15px;
+  width: 330px;
+  height: 290px;
+  padding-bottom: 90px;
+}
+
+.brand-card button {
+  position: absolute;
+  bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: table;
+  background-color: rgb(72, 178, 130);
+  border-color: rgb(72, 178, 130);
+  border-width: 1px;
+  border-radius: 6px;
+  height: 30px;
+  width: 300px;
+  cursor: pointer;
+}
+.brand-card button:active {
+  background-color: rgba(91, 201, 151);
+  border-color: rgba(91, 201, 151);
+  transition: color 0s;
+}
+.brand-card button:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+.brand-card p {
+  display: inline-flex;
+  user-select: text;
+  left: 13px;
+  top: 225px;
+  position: absolute;
+  text-align: center;
+}
+.brand-card img {
+  display: block;
+  display: inline-flex;
+  padding-top: 30px;
+  margin-left: 5%;
+  width: 260px;
+  height: 140px;
+}
+
+.brand-card a {
+  font-family: "Comfortaa", cursive;
+  text-decoration: none;
+  color: white;
+}
+
+.main-card {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  user-select: none;
+  justify-content: center;
+}
+
+.cond-series {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  user-select: none;
+  margin-top: 100px;
+}
+
+.series1 {
+  font-family: "Comfortaa", cursive;
+  color: rgb(72, 178, 130);
+  font-size: 30px;
+  height: 50px;
+  display: inline-flex;
+  user-select: text;
+  font-size: 20px;
+  left: 13px;
+  top: 215px;
+  position: absolute;
+  text-align: center;
+}
+
+.cond-series-item {
+  position: relative;
+  margin: 5px 20px;
+  margin-top: 2%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-color: rgb(72, 178, 130);
+  border-style: solid;
+  border-width: 0.1pc;
+  padding: 15px;
+  width: 340px;
+  height: 290px;
+}
+
+.cond-series-item button {
+  position: absolute;
+  z-index: 100px;
+  bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: table;
+  background-color: rgb(72, 178, 130);
+  border-color: rgb(72, 178, 130);
+  border-width: 1px;
+  border-radius: 6px;
+  height: 24px;
+  width: 300px;
+  cursor: pointer;
+}
+
+.cond-series-item button:active {
+  background-color: rgba(91, 201, 151);
+  border-color: rgba(91, 201, 151);
+  transition: color 0s;
+}
+.cond-series-item:hover {
+  box-shadow: 0px 1px 2px 0px rgb(72, 178, 130),
+    1px 2px 4px 0px rgb(72, 178, 130), 2px 4px 8px 0px rgb(72, 178, 130),
+    2px 4px 16px 0px rgb(72, 178, 130);
+  border-width: 0.1pc;
+}
+
+.cond-series-item img {
+  display: block;
+  display: inline-flex;
+  width: 300px;
+  height: 140px;
+}
+
+.cond-series-item a {
+  font-family: "Comfortaa", cursive;
+  text-decoration: none;
+  color: white;
+}
+
+.color-warn {
+  font-size: 26px;
+  color: rgb(242, 59, 59);
+}
+
+.cotl-series-margin {
+  margin-bottom: 2%;
+}
+
+.cotl-series {
+  margin-top: 25px;
+  display: inline-flex;
+  user-select: none;
+}
+
+.series {
+  font-family: "Comfortaa", cursive;
+  color: rgb(72, 178, 130);
+  font-size: 20px;
+  height: 50px;
+  margin-top: 10px;
+  display: inline-flex;
+  user-select: text;
+  font-size: 20px;
+  left: 5px;
+  top: 360px;
+  position: absolute;
+  text-align: center;
+}
+
+.info {
+  font-family: "Comfortaa", cursive;
+  color: black;
+  font-size: 30px;
+  height: 50px;
+  margin-top: 55px;
+  display: inline-flex;
+  user-select: text;
+  font-size: 20px;
+  left: 1px;
+  top: -50px;
+  position: absolute;
+  text-align: center;
+}
+
+.cotl-series-item {
+  position: relative;
+  margin: 5px 23px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-color: rgb(72, 178, 130);
+  border-style: solid;
+  border-width: 0.1pc;
+  padding: 40px;
+  width: 250px;
+  height: 450px;
+}
+
+.cotl-series-item button {
+  position: absolute;
+  z-index: 500px;
+  left: 5px;
+  bottom: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: table;
+  background-color: rgb(72, 178, 130);
+  border-color: rgb(72, 178, 130);
+  border-width: 1px;
+  border-radius: 6px;
+  height: 24px;
+  width: 235px;
+  cursor: pointer;
+}
+
+.cotl-series-item button:active {
+  background-color: rgba(91, 201, 151);
+  border-color: rgba(91, 201, 151);
+  transition: color 0s;
+}
+.cotl-series-item:hover {
+  box-shadow: 0px 1px 2px 0px rgb(72, 178, 130),
+    1px 2px 4px 0px rgb(72, 178, 130), 2px 4px 8px 0px rgb(72, 178, 130),
+    2px 4px 16px 0px rgb(72, 178, 130);
+  border-width: 0.1pc;
+}
+
+.cotl-series-item img {
+  display: block;
+  display: inline-flex;
+  padding-top: 2%;
+  margin-left: -6%;
+  width: 190px;
+  height: 330px;
+}
+
+.cotl-series-item a {
+  font-family: "Comfortaa", cursive;
+  text-decoration: none;
+  color: white;
+}
+
+.end-p-disc {
+  text-align: center;
+  margin-top: 150px;
+  font-size: 28px;
+}
+
+.soc-net {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(72, 178, 130);
+  border-radius: 25px;
+  border-width: 2px;
+  box-shadow: 1px 1px 2px 2px rgb(176, 176, 176);
+  width: 330px;
+  height: 350px;
+  margin-top: 70px;
+}
+
+.tel {
+  margin-top: 200px;
+}
+
+.icons {
+  display: flex;
+  margin-top: 50px;
+}
+
+.soc-net:hover {
+  background-color: rgb(249, 249, 249);
+}
+
+.soc-net img {
+  width: 100px;
+  height: 100px;
+}
+
+.soc-net p {
+  font-size: 25px;
+  margin-top: -150px;
+}
+
+
+.social a {
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  float: left;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.1);
+  border-radius: 34px;
+  margin: 0 10px 10px 0;
+  padding: 6px;
+  color: #000;
+}
+
+.viber svg {
+  margin-left: 2px;
+  margin-top: 4px;
+  width: 60px;
+  height: 60px;
+}
+
+.telegram i {
+  margin-top: 8px;
+  margin-left: -5px;
+}
+
+.whatsapp i {
+  margin-top: -1px;
+  margin-left: 3px;
+}
+
+.telegram a:hover {
+  background: #249bd7;
+  color: #fff;
+  transition: 0.7s;
+}
+.whatsapp a:hover {
+  background: #50b154;
+  color: #fff;
+  transition: 0.7s;
+}
+.viber a:hover {
+  background: #7b519d;
+  color: #fff;
+  transition: 0.7s;
+}
+
+.kent-img {
+  margin-left: 37%;
+  margin-top: 150px;
+}
+
+.temp-warn {
+  font-size: 20px;
+  margin-top: 5%;
+  margin-left: 10px;
+}
+
+.main-bg {
+  width: 100%;
+  height: 700px;
+}
+
+.main-bg1 {
+  width: 0;
+}
+
+.dss {
+  display: flex;
+  min-height: 100vh;
+}
+
+.service-block1 {
+  margin-top: 80px;
+  border: 1px solid rgb(72, 178, 130);
+  width: 50%;
+  background-image: url(img/service1.png);
+  background-size: cover;
+}
+
+.service-block2 {
+  margin-top: 80px;
+  border: 1px solid rgb(72, 178, 130);
+  width: 50%;
+  background-image: url(img/service2.png);
+  background-size: 100% 100%;
+}
+
+.mont {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 400px;
+  height: 500px;
+  margin-top: 200px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.mont h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.mont p {
+  font-size: 24px;
+  margin-top: 60px;
+  margin-left: 10px;
+}
+
+.prof {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 400px;
+  height: 500px;
+  margin-top: 200px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.prof h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.prof p {
+  font-size: 24px;
+  margin-top: 45px;
+  margin-left: 10px;
+}
+
+footer {
+  padding: 30px 0;
+  margin-top: auto;
+  background: #3c3d41;
+  color: rgb(131, 126, 126);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.foo {
+  display: flex;
+  margin-left: 2%;
+}
+
+.footer-foo {
+  margin-right: 2%;
+}
+
+.footer-foo a {
+  color: rgb(72, 178, 130);
+}
+
+@media (max-width: 1751px) {
+  .temp-warn {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .main-card {
+    margin-top: 8%;
+    margin-bottom: 5%;
+  }
+
+  .temp-warn {
+    margin-top: 100px;
+  }
+
+  .main-bg {
+    width: 100%;
+    height: 700px;
+  }
+
+  .main-bg1 {
+    width: 0;
+  }
+
+  .page1-text1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    font-size: 40px;
+    color: rgb(72, 178, 130);
+  }
+
+  .page1-text2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    font-size: 40px;
+    color: rgb(72, 178, 130);
+  }
+
+  .main-stroke {
+    margin-top: 10%;
+  }
+
+  .main-stroke-goods {
+    display: flex;
+    margin-left: 12%;
+  }
+
+  .main-stroke-h {
+    font-size: 27px;
+    width: 45%;
+    margin-top: 1%;
+    margin-left: 40%;
+    border-bottom: 2px solid rgba(91, 201, 151);
+  }
+
+  .main-stroke-img {
+    margin-top: -3%;
+    width: 27%;
+    height: 355px;
+  }
+
+  .main-stroke-flex {
+    display: flex;
+    margin-left: 3%;
+    margin-top: 2%;
+  }
+
+  .main-stroke1 {
+    margin-bottom: 7%;
+    margin-left: -2%;
+  }
+
+  .main-stroke-goods1 {
+    display: flex;
+    margin-left: 9%;
+  }
+
+  .main-stroke-h1 {
+    width: 44%;
+    margin-top: 8%;
+    margin-left: 196px;
+    padding-left: 37%;
+    border-bottom: 2px solid rgba(91, 201, 151);
+  }
+
+  .main-stroke-img1 {
+    margin-top: -3%;
+    width: 24%;
+    height: 355px;
+    margin-left: 5%;
+  }
+
+  .card-cotl {
+    position: relative;
+    margin: 5px 20px;
+    margin-left: 25px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 328px;
+    height: 530px;
+  }
+
+  .card-cotl:hover {
+    box-shadow: 0px 1px 2px 0px rgb(72, 178, 130),
+      1px 2px 4px 0px rgb(72, 178, 130), 2px 4px 8px 0px rgb(72, 178, 130),
+      2px 4px 16px 0px rgb(72, 178, 130);
+    border-width: 0.1pc;
+  }
+
+  .card-cotl button {
+    position: absolute;
+    bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 30px;
+    width: 300px;
+    cursor: pointer;
+  }
+  .card-cotl button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .card-cotl button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .card-cotl p {
+    display: inline-flex;
+    user-select: text;
+    left: 13px;
+    margin-top: 440px;
+    position: absolute;
+    text-align: center;
+  }
+  .card-cotl img {
+    display: block;
+    display: inline-flex;
+    width: 275px;
+    height: 410px;
+  }
+
+  .card-cotl a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .main-stroke2 {
+    margin-bottom: 10%;
+  }
+
+  .main-stroke-goods2 {
+    display: flex;
+    margin-left: 5%;
+  }
+
+  .main-stroke-h2 {
+    width: 39%;
+    margin-top: 8%;
+    margin-left: 9%;
+    padding-left: 29%;
+    border-bottom: 2px solid rgba(91, 201, 151);
+  }
+
+  .main-stroke-img2 {
+    margin-top: -3%;
+    width: 35%;
+    height: 540px;
+    margin-left: 5%;
+  }
+
+  .main-stroke3 {
+    margin-top: -4%;
+    margin-bottom: 10%;
+    margin-left: -1%;
+  }
+
+  .main-stroke-goods3 {
+    display: flex;
+    margin-top: 1%;
+    margin-left: 15%;
+  }
+
+  .main-stroke-h3 {
+    width: 38%;
+    margin-top: 8%;
+    margin-left: 49%;
+    padding-left: 28%;
+    border-bottom: 2px solid rgba(91, 201, 151);
+  }
+
+  .main-stroke-img3 {
+    margin-left: -5%;
+    margin-right: 5%;
+    margin-top: -2%;
+    width: 35%;
+    height: 520px;
+  }
+
+  .main-stroke-flex {
+    display: flex;
+    margin-left: 3%;
+  }
+
+  .brand-card {
+    position: relative;
+    margin: 5px 15px;
+    margin-top: 2%;
+    margin-left: 1%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 330px;
+    height: 290px;
+  }
+
+  .brand-card button {
+    position: absolute;
+    bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 30px;
+    width: 300px;
+    cursor: pointer;
+  }
+  .brand-card button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .brand-card button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .brand-card p {
+    display: inline-flex;
+    user-select: text;
+    left: 13px;
+    top: 225px;
+    position: absolute;
+    text-align: center;
+  }
+  .brand-card img {
+    display: block;
+    display: inline-flex;
+    padding-top: 30px;
+    margin-left: 5%;
+    width: 260px;
+    height: 140px;
+  }
+
+  .brand-card a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .cond-series {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    user-select: none;
+    margin-top: 100px;
+  }
+
+  .series1 {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 30px;
+    height: 50px;
+    display: inline-flex;
+    user-select: text;
+    font-size: 20px;
+    left: 13px;
+    top: 215px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .cond-series-item {
+    position: relative;
+    margin: 1px 10px;
+    margin-top: 2%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 340px;
+    height: 290px;
+  }
+
+  .cond-series-item button {
+    position: absolute;
+    z-index: 100px;
+    bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 24px;
+    width: 300px;
+    cursor: pointer;
+  }
+
+  .cond-series-item button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .cond-series-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .cond-series-item img {
+    display: block;
+    display: inline-flex;
+    width: 300px;
+    height: 140px;
+  }
+
+  .cond-series-item a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .kent-img {
+    margin-left: 34%;
+    margin-top: 110px;
+  }
+
+  .end-p-disc {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 28px;
+  }
+
+  .soc-net {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(72, 178, 130);
+    border-radius: 25px;
+    border-width: 2px;
+    box-shadow: 1px 1px 2px 2px rgb(176, 176, 176);
+    width: 330px;
+    height: 350px;
+    margin-top: 70px;
+  }
+
+  .soc-net:hover {
+    background-color: rgb(249, 249, 249);
+  }
+
+  .soc-net img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .soc-net p {
+    font-size: 25px;
+    margin-top: -150px;
+  }
+
+  .tel {
+    margin-top: 200px;
+  }
+  
+  .icons {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .social a {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 34px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+  }
+
+  .viber svg {
+    margin-left: 2px;
+    margin-top: 4px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .telegram i {
+    margin-top: 8px;
+    margin-left: -5px;
+  }
+
+  .whatsapp i {
+    margin-top: -1px;
+    margin-left: 3px;
+  }
+
+  .telegram a:hover {
+    background: #249bd7;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .whatsapp a:hover {
+    background: #50b154;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .viber a:hover {
+    background: #7b519d;
+    color: #fff;
+    transition: 0.7s;
+  }
+
+  .dss {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .service-block1 {
+    margin-top: 80px;
+    width: auto;
+    background-image: url(img/service1.png);
+  }
+
+  .service-block2 {
+    width: 100%;
+    background-image: url(img/service2.png);
+    margin-top: 0px;
+  }
+
+  .mont {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .mont h2 {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .mont p {
+    font-size: 24px;
+    margin-top: 60px;
+    margin-left: 10px;
+  }
+
+  .prof {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .prof h2 {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .prof p {
+    font-size: 24px;
+    margin-top: 45px;
+    margin-left: 10px;
+  }
+
+  .prices-main p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1251px) {
+  .wdd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image img {
+    margin-top: 100px;
+  }
+
+  .prices-main button {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 1079px) {
+  .cond-series {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-bg {
+    width: 100%;
+    height: 500px;
+  }
+
+  .main-bg1 {
+    width: 0;
+  }
+
+  .page1-text1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    font-size: 35px;
+    color: rgb(72, 178, 130);
+  }
+
+  .page1-text2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    font-size: 40px;
+    color: rgb(72, 178, 130);
+  }
+
+  .title-name {
+    font-size: 35px;
+  }
+
+  .main-card {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    user-select: none;
+  }
+
+  .main-stroke {
+    margin-top: 10%;
+  }
+
+  .main-stroke-goods {
+    display: flex;
+    margin-left: 8%;
+  }
+
+  .main-stroke-h {
+    font-size: 27px;
+    width: 53%;
+    margin-top: 1%;
+    margin-left: 38%;
+    border-bottom: 2px solid rgba(91, 201, 151);
+  }
+
+  .main-stroke-img {
+    margin-top: -3%;
+    width: 27%;
+    height: 288px;
+  }
+
+  .main-stroke-flex {
+    display: flex;
+    margin-left: 3%;
+    margin-top: 2%;
+  }
+
+  .main-stroke1 {
+    margin-bottom: 7%;
+    margin-left: -2%;
+  }
+
+  .main-stroke-goods1 {
+    display: flex;
+    margin-left: 5%;
+  }
+
+  .main-stroke-h1 {
+    width: 52%;
+    margin-top: 8%;
+    margin-left: 10%;
+    padding-left: 42%;
+    border-bottom: 2px solid rgba(91, 201, 151);
+  }
+
+  .main-stroke-img1 {
+    margin-top: -3%;
+    width: 26%;
+    height: 288px;
+    margin-left: 3%;
+  }
+
+  .card-cotl {
+    position: relative;
+    margin: 5px 20px;
+    margin-left: 25px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 328px;
+    height: 530px;
+  }
+
+  .card-cotl:hover {
+    box-shadow: 0px 1px 2px 0px rgb(72, 178, 130),
+      1px 2px 4px 0px rgb(72, 178, 130), 2px 4px 8px 0px rgb(72, 178, 130),
+      2px 4px 16px 0px rgb(72, 178, 130);
+    border-width: 0.1pc;
+  }
+
+  .card-cotl button {
+    position: absolute;
+    bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 30px;
+    width: 300px;
+    cursor: pointer;
+  }
+  .card-cotl button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .card-cotl button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .card-cotl p {
+    display: inline-flex;
+    user-select: text;
+    left: 13px;
+    margin-top: 440px;
+    position: absolute;
+    text-align: center;
+  }
+  .card-cotl img {
+    display: block;
+    display: inline-flex;
+    width: 275px;
+    height: 410px;
+  }
+
+  .card-cotl a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .main-stroke2 {
+    margin-bottom: 10%;
+  }
+
+  .main-stroke-goods2 {
+    display: flex;
+    margin-left: 5%;
+  }
+
+  .main-stroke-h2 {
+    width: 42%;
+    margin-top: 8%;
+    margin-left: 10%;
+    padding-left: 28%;
+    border-bottom: 2px solid rgba(91, 201, 151);
+  }
+
+  .main-stroke-img2 {
+    margin-top: -3%;
+    width: 35%;
+    height: 445px;
+    margin-left: 5%;
+  }
+
+  .main-stroke3 {
+    margin-top: -4%;
+    margin-bottom: 10%;
+    margin-left: -1%;
+  }
+
+  .main-stroke-goods3 {
+    display: flex;
+    margin-top: 1%;
+    margin-left: 16%;
+  }
+
+  .main-stroke-h3 {
+    width: 42%;
+    margin-top: 8%;
+    margin-left: 49%;
+    padding-left: 28%;
+    border-bottom: 2px solid rgba(91, 201, 151);
+  }
+
+  .main-stroke-img3 {
+    margin-left: -5%;
+    margin-right: 5%;
+    margin-top: -2%;
+    width: 35%;
+    height: 435px;
+  }
+
+  .main-stroke-flex {
+    display: flex;
+    margin-left: 3%;
+  }
+
+  .brands-cond p {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 23px;
+    margin-left: 23%;
+    margin-top: 7%;
+  }
+
+  .brand-card {
+    position: relative;
+    margin: 5px 15px;
+    margin-top: 2%;
+    margin-left: 1%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 230px;
+    height: 190px;
+  }
+
+  .brand-card button {
+    position: absolute;
+    bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 25px;
+    width: 200px;
+  }
+  .brand-card button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .brand-card button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .brand-card p {
+    display: inline-flex;
+    user-select: text;
+    left: 13px;
+    top: 125px;
+    position: absolute;
+    text-align: center;
+  }
+  .brand-card img {
+    display: block;
+    display: inline-flex;
+    margin-top: 1%;
+    margin-left: 35px;
+    width: 130px;
+    height: 80px;
+  }
+
+  .brand-card a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .cond-series {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    user-select: none;
+    margin-top: 100px;
+  }
+
+  .series1 {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 30px;
+    height: 50px;
+    display: inline-flex;
+    user-select: text;
+    font-size: 20px;
+    left: 13px;
+    top: 215px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .cond-series-item {
+    position: relative;
+    margin: 1px 10px;
+    margin-top: 2%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 340px;
+    height: 290px;
+  }
+
+  .cond-series-item button {
+    position: absolute;
+    z-index: 100px;
+    bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 24px;
+    width: 300px;
+  }
+
+  .cond-series-item button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .cond-series-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .cond-series-item img {
+    display: block;
+    display: inline-flex;
+    width: 300px;
+    height: 140px;
+  }
+
+  .cond-series-item a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .kent-img {
+    margin-left: 30%;
+    margin-top: 110px;
+  }
+
+  .kent-img img {
+    width: 50%;
+  }
+
+  .cotl-series {
+    margin-top: 25px;
+    display: inline-flex;
+    user-select: none;
+  }
+
+  .series {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 17px;
+    height: 50px;
+    margin-top: -2%;
+    display: inline-flex;
+    user-select: text;
+    font-size: 20px;
+    left: 5px;
+    top: 310px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .info {
+    font-family: "Comfortaa", cursive;
+    color: black;
+    font-size: 30px;
+    height: 50px;
+    margin-top: 55px;
+    display: inline-flex;
+    user-select: text;
+    font-size: 20px;
+    left: 1px;
+    top: -50px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .cotl-series-item {
+    position: relative;
+    margin: 5px 13px;
+    margin-top: -2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 40px;
+    width: 215px;
+    height: 380px;
+  }
+
+  .cotl-series-item button {
+    position: absolute;
+    z-index: 500px;
+    left: 5px;
+    bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 24px;
+    width: 200px;
+  }
+
+  .cotl-series-item button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .cotl-series-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .cotl-series-item img {
+    display: block;
+    display: inline-flex;
+    margin-top: 24%;
+    margin-left: -6%;
+    width: 130px;
+    height: 230px;
+  }
+
+  .cotl-series-item a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .end-p-disc {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 28px;
+  }
+
+  .soc-net {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(72, 178, 130);
+    border-radius: 25px;
+    border-width: 2px;
+    box-shadow: 1px 1px 2px 2px rgb(176, 176, 176);
+    width: 330px;
+    height: 350px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  .soc-net:hover {
+    background-color: rgb(249, 249, 249);
+  }
+
+  .soc-net img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .soc-net p {
+    font-size: 25px;
+    margin-top: -150px;
+  }
+
+  .tel {
+    margin-top: 200px;
+  }
+  
+  .icons {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .social a {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 34px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+  }
+
+  .viber svg {
+    margin-left: 2px;
+    margin-top: 4px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .telegram i {
+    margin-top: 8px;
+    margin-left: -5px;
+  }
+
+  .whatsapp i {
+    margin-top: -1px;
+    margin-left: 3px;
+  }
+
+  .telegram a:hover {
+    background: #249bd7;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .whatsapp a:hover {
+    background: #50b154;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .viber a:hover {
+    background: #7b519d;
+    color: #fff;
+    transition: 0.7s;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .image img {
+    width: 850px;
+    height: 800px;
+  }
+
+}
+
+@media (max-width: 830px) {
+  .nav-toggle {
+    display: block;
+    margin-top: 1%;
+  }
+  header {
+    padding: 10px 0;
+  }
+
+  #menu {
+    max-height: 0;
+    background: rgb(72, 178, 130);
+    float: none;
+    position: absolute;
+    overflow: hidden;
+    top: 70px;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    font-size: 20px;
+  }
+
+  #menu li {
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #ebebe3;
+    margin-right: 0;
+  }
+
+  #menu.active {
+    max-height: 250px;
+  }
+
+  .page1-text1 {
+    font-size: 30px;
+  }
+
+  .page1-text2 {
+    font-size: 30px;
+  }
+
+  .title-name {
+    font-size: 30px;
+  }
+
+  .service-block1 {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .temp-warn {
+    margin-top: 120px;
+  }
+
+  .page1-text1 {
+    font-size: 25px;
+  }
+
+  .page1-text2 {
+    font-size: 25px;
+  }
+
+  .title-name {
+    font-size: 25px;
+  }
+
+  .main-page-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+  }
+
+  .title-name {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    width: 450px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(91, 201, 151);
+  }
+
+  .image-block {
+    width: 450px;
+    height: 300px;
+  }
+
+  .goods {
+    display: flex;
+    margin-left: -25px;
+    margin-top: 25px;
+  }
+
+  .main-card {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    user-select: none;
+  }
+
+  .cond-series {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    position: relative;
+    margin: 5px 20px;
+    margin-top: 10px;
+    margin-left: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 4px;
+    width: 202px;
+    height: 170px;
+  }
+
+  .card button {
+    position: absolute;
+    padding-left: 10px;
+    bottom: 7px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 25px;
+    width: 188px;
+  }
+  .card button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .card button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .card p {
+    display: inline-flex;
+    user-select: text;
+    left: 5px;
+    top: 110px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+  }
+  .card img {
+    display: block;
+    display: inline-flex;
+    padding-top: 10px;
+    width: 190px;
+    height: 90px;
+  }
+
+  .card a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .main-stroke {
+    margin-top: 10%;
+  }
+
+  .main-stroke-goods {
+    display: flex;
+    margin-left: 5%;
+  }
+
+  .main-stroke-h {
+    font-size: 20px;
+    width: 58%;
+    margin-top: 1%;
+    margin-left: 200px;
+    border-bottom: 2px solid rgba(91, 201, 151);
+  }
+
+  .main-stroke-img {
+    margin-top: -3%;
+    width: 27%;
+    height: 218px;
+  }
+
+  .main-stroke-flex {
+    display: flex;
+  }
+
+  .main-stroke1 {
+    margin-bottom: 7%;
+    margin-left: -2%;
+  }
+
+  .main-stroke-goods1 {
+    display: flex;
+    margin-left: 1%;
+  }
+
+  .main-stroke-h1 {
+    font-size: 20px;
+    width: 57%;
+    margin-top: 8%;
+    margin-left: 7%;
+    padding-left: 49%;
+    border-bottom: 2px solid rgba(91, 201, 151);
+  }
+
+  .main-stroke-img1 {
+    margin-top: -3%;
+    width: 26%;
+    height: 218px;
+    margin-left: 3%;
+  }
+
+  .cotl-goods {
+    margin-top: 10px;
+  }
+
+  .card-cotl {
+    position: relative;
+    margin: 5px 20px;
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 202px;
+    height: 320px;
+  }
+
+  .card-cotl button {
+    margin-left: -10px;
+    position: absolute;
+    bottom: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 25px;
+    width: 190px;
+  }
+  .card-cotl button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .card-cotl button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .card-cotl p {
+    font-size: 13px;
+    display: inline-flex;
+    user-select: text;
+    left: 12px;
+    margin-top: 240px;
+    position: absolute;
+    text-align: center;
+  }
+  .card-cotl img {
+    display: block;
+    display: inline-flex;
+    width: 125px;
+    height: 215px;
+    margin-left: 18px;
+  }
+
+  .card-cotl a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .main-stroke2 {
+    margin-bottom: 10%;
+  }
+
+  .main-stroke-goods2 {
+    display: flex;
+    margin-left: 0%;
+  }
+
+  .main-stroke-h2 {
+    font-size: 20px;
+    width: 46%;
+    margin-top: 8%;
+    margin-left: 6%;
+    padding-left: 34%;
+    border-bottom: 2px solid rgba(91, 201, 151);
+  }
+
+  .main-stroke-img2 {
+    margin-top: -3%;
+    width: 35%;
+    height: 375px;
+    margin-left: 5%;
+  }
+
+  .main-stroke3 {
+    margin-top: -8%;
+    margin-bottom: 5%;
+    margin-left: -1%;
+  }
+
+  .main-stroke-goods3 {
+    display: flex;
+    margin-top: 1%;
+    margin-left: 13%;
+  }
+
+  .main-stroke-h3 {
+    font-size: 20px;
+    width: 46%;
+    margin-top: 8%;
+    margin-left: 49%;
+    padding-left: 34%;
+    border-bottom: 2px solid rgba(91, 201, 151);
+  }
+
+  .main-stroke-img3 {
+    margin-left: -5%;
+    margin-right: 5%;
+    margin-top: -2%;
+    width: 35%;
+    height: 368px;
+  }
+
+  .main-stroke-flex {
+    display: flex;
+    margin-left: 3%;
+  }
+
+  .main-bg {
+    width: 100%;
+    height: 400px;
+  }
+
+  .main-bg1 {
+    width: 0;
+  }
+
+  .brands-cond p {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 23px;
+    margin-left: 15%;
+    margin-top: 7%;
+  }
+
+  .brand-card {
+    position: relative;
+    margin: 5px 15px;
+    margin-top: 2%;
+    margin-left: 1%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 230px;
+    height: 190px;
+  }
+
+  .brand-card img {
+    margin-left: 35px;
+  }
+
+  .end-p-disc {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 23px;
+  }
+
+  .soc-net {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(72, 178, 130);
+    border-radius: 25px;
+    border-width: 2px;
+    box-shadow: 1px 1px 2px 2px rgb(176, 176, 176);
+    width: 330px;
+    height: 350px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  .soc-net:hover {
+    background-color: rgb(249, 249, 249);
+  }
+
+  .soc-net img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .soc-net p {
+    font-size: 25px;
+    margin-top: -150px;
+  }
+
+  .tel {
+    margin-top: 200px;
+  }
+  
+  .icons {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .social a {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 34px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+  }
+
+  .viber svg {
+    margin-left: 2px;
+    margin-top: 4px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .telegram i {
+    margin-top: 8px;
+    margin-left: -5px;
+  }
+
+  .whatsapp i {
+    margin-top: -1px;
+    margin-left: 3px;
+  }
+
+  .telegram a:hover {
+    background: #249bd7;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .whatsapp a:hover {
+    background: #50b154;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .viber a:hover {
+    background: #7b519d;
+    color: #fff;
+    transition: 0.7s;
+  }
+
+  .dss {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .service-block1 {
+    margin-top: 20px;
+    width: auto;
+    background-image: url(img/service1.png);
+  }
+
+  .service-block2 {
+    width: 100%;
+    background-image: url(img/service2.png);
+    margin-top: 0px;
+    height: 800px;
+  }
+
+  .mont {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .mont h2 {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .mont p {
+    font-size: 24px;
+    margin-top: 60px;
+    margin-left: 10px;
+  }
+
+  .prof {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .prof h2 {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .prof p {
+    font-size: 24px;
+    margin-top: 45px;
+    margin-left: 10px;
+  }
+
+  .image img {
+    width: 700px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 613px) {
+  .image img {
+    width: 500px;
+    height: 400px;
+  }
+
+  .prices-main p {
+    font-size: 17px;
+  }
+
+  .discription {
+    margin-top: -90px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    position: relative;
+    margin: 5px 12px;
+    margin-top: 10px;
+    margin-left: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 4px;
+    width: 157px;
+    height: 130px;
+  }
+
+  .card button {
+    position: absolute;
+    padding-left: 10px;
+    bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 138px;
+  }
+  .card button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .card button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .card p {
+    display: inline-flex;
+    user-select: text;
+    top: 75px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+  }
+  .card img {
+    display: block;
+    display: inline-flex;
+    padding-top: 10px;
+    width: 140px;
+    height: 60px;
+  }
+
+  .card a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .title-name {
+    width: 350px;
+  }
+
+  .image-block {
+    width: 350px;
+    height: 250px;
+  }
+
+  .kent-img img {
+    width: 70%;
+  }
+
+  .cotl-goods {
+    margin-left: -20px;
+  }
+
+  .main-page-block {
+    margin-bottom: -50px;
+  }
+
+  .card-cotl {
+    position: relative;
+    margin: 5px 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 160px;
+    height: 240px;
+  }
+
+  .card-cotl button {
+    margin-left: -10px;
+    position: absolute;
+    bottom: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 146px;
+  }
+  .card-cotl button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .card-cotl button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .card-cotl p {
+    font-size: 13px;
+    display: inline-flex;
+    user-select: text;
+    left: 1px;
+    margin-top: 170px;
+    position: absolute;
+    text-align: center;
+  }
+  .card-cotl img {
+    display: block;
+    display: inline-flex;
+    width: 110px;
+    height: 160px;
+    margin-left: 10px;
+  }
+
+  .card-cotl a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .main-stroke-flex {
+    display: flex;
+    margin-left: 3%;
+  }
+
+  .brands-cond p {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 20px;
+    margin-left: 10%;
+    margin-top: 7%;
+  }
+
+  .brand-card {
+    position: relative;
+    margin: 5px 10px;
+    margin-top: 2%;
+    margin-left: 1%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 180px;
+    height: 140px;
+  }
+
+  .brand-card button {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 165px;
+  }
+  .brand-card button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .brand-card button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .brand-card p {
+    display: inline-flex;
+    user-select: text;
+    left: 13px;
+    top: 95px;
+    position: absolute;
+    text-align: center;
+  }
+  .brand-card img {
+    display: block;
+    display: inline-flex;
+    margin-top: -15%;
+    margin-left: 1%;
+    width: 130px;
+    height: 80px;
+  }
+
+  .brand-card a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .cond-series {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    user-select: none;
+    margin-top: 100px;
+    margin-bottom: 5%;
+  }
+
+  .series1 {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 13px;
+    height: 50px;
+    display: inline-flex;
+    user-select: text;
+    left: 14px;
+    top: 85px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .cond-series-item {
+    position: relative;
+    margin: 1px 10px;
+    margin-top: 2%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 180px;
+    height: 140px;
+  }
+
+  .cond-series-item button {
+    position: absolute;
+    z-index: 100px;
+    bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 165px;
+    left: 5px;
+    bottom: 5px;
+  }
+
+  .cond-series-item button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .cond-series-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .cond-series-item img {
+    display: block;
+    display: inline-flex;
+    width: 160px;
+    height: 70px;
+    margin-left: -5%;
+    margin-top: -5%;
+  }
+
+  .cond-series-item a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .kent-img {
+    margin-left: 30%;
+    margin-top: 18%;
+  }
+
+  .kent-img img {
+    width: 50%;
+  }
+
+  .cotl-series {
+    margin-top: 25px;
+    display: inline-flex;
+    user-select: none;
+  }
+
+  .series {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 15px;
+    height: 50px;
+    margin-top: -2%;
+    display: inline-flex;
+    user-select: text;
+    left: 5px;
+    top: 250px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .info {
+    font-family: "Comfortaa", cursive;
+    color: black;
+    font-size: 15px;
+    height: 50px;
+    margin-top: 55px;
+    display: inline-flex;
+    user-select: text;
+    left: 1px;
+    top: -50px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .cotl-series-item {
+    position: relative;
+    margin: 5px 13px;
+    margin-top: -2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 40px;
+    width: 165px;
+    height: 310px;
+  }
+
+  .cotl-series-item button {
+    position: absolute;
+    z-index: 500px;
+    left: 5px;
+    bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 22px;
+    width: 150px;
+  }
+
+  .cotl-series-item button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .cotl-series-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .cotl-series-item img {
+    display: block;
+    display: inline-flex;
+    margin-top: 12%;
+    margin-left: -12%;
+    width: 110px;
+    height: 190px;
+  }
+
+  .cotl-series-item a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .end-p-disc {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 23px;
+  }
+
+  .soc-net {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(72, 178, 130);
+    border-radius: 25px;
+    border-width: 2px;
+    box-shadow: 1px 1px 2px 2px rgb(176, 176, 176);
+    width: 330px;
+    height: 350px;
+    margin-top: 70px;
+  }
+
+  .soc-net:hover {
+    background-color: rgb(249, 249, 249);
+  }
+
+  .soc-net img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .soc-net p {
+    font-size: 25px;
+    margin-top: -150px;
+  }
+
+  .tel {
+    margin-top: 200px;
+  }
+  
+  .icons {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .social a {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 34px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+  }
+
+  .viber svg {
+    margin-left: 2px;
+    margin-top: 4px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .telegram i {
+    margin-top: 8px;
+    margin-left: -5px;
+  }
+
+  .whatsapp i {
+    margin-top: -1px;
+    margin-left: 3px;
+  }
+
+  .telegram a:hover {
+    background: #249bd7;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .whatsapp a:hover {
+    background: #50b154;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .viber a:hover {
+    background: #7b519d;
+    color: #fff;
+    transition: 0.7s;
+  }
+
+  .dss {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .service-block1 {
+    margin-top: 20px;
+    width: auto;
+    background-image: url(img/service1.png);
+    height: 700px;
+  }
+
+  .service-block2 {
+    width: 100%;
+    background-image: url(img/service2.png);
+    margin-top: 0px;
+    height: 650px;
+  }
+
+  .mont {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    margin-top: 180px;
+    margin-bottom: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .mont h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 21px;
+  }
+
+  .mont p {
+    font-size: 18px;
+    margin-top: 50px;
+    margin-left: 5px;
+  }
+
+  .prof {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    margin-top: 140px;
+    margin-bottom: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .prof h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 21px;
+  }
+
+  .prof p {
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 509px) {
+  .footer-foo a,
+  .footer-foo span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 461px) {
+  .image img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-toggle {
+    display: block;
+    margin-top: -15%;
+  }
+  .logo {
+    float: none;
+    margin: 0 auto 15px;
+    display: table;
+  }
+  .logo span {
+    margin: 0 2px;
+  }
+
+  #menu {
+    top: 98px;
+  }
+
+  .footer-col {
+    float: none;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-col:last-child {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  button {
+    font-family: "Comfortaa", cursive;
+    font-size: 11px;
+  }
+
+  .main-bg1 {
+    margin-top: 100px;
+    width: 100%;
+    height: 270px;
+  }
+
+  .main-bg {
+    width: 0;
+    height: 0;
+  }
+
+  .page1-text1 {
+    font-size: 18px;
+    margin-left: -1%;
+  }
+
+  .page1-text2 {
+    font-size: 23px;
+    margin-left: -1%;
+  }
+
+  .main-card {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    user-select: none;
+    margin-top: 13%;
+  }
+
+  .goods {
+    margin-left: -14px;
+  }
+
+  .card {
+    position: relative;
+    margin: 5px 20px;
+    margin-top: 10px;
+    margin-left: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 4px;
+    width: 158px;
+    height: 140px;
+  }
+
+  .card button {
+    position: absolute;
+    padding-left: 10px;
+    bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 145px;
+  }
+  .card button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .card button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .card p {
+    display: inline-flex;
+    user-select: text;
+    left: 5px;
+    top: 85px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+  }
+  .card img {
+    display: block;
+    display: inline-flex;
+    padding-top: 10px;
+    width: 120px;
+    height: 60px;
+    margin-left: 10px;
+  }
+
+  .card a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .cotl-goods {
+    margin-left: -25px;
+  }
+
+  .card-cotl {
+    position: relative;
+    margin: 5px 20px;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 4px;
+    width: 153px;
+    height: 240px;
+  }
+
+  .card-cotl button {
+    position: absolute;
+    margin-left: 0px;
+    bottom: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 143px;
+  }
+  .card-cotl button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .card-cotl button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .card-cotl p {
+    display: inline-flex;
+    user-select: text;
+    top: 13px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+  }
+  .card-cotl img {
+    display: block;
+    display: inline-flex;
+    padding-top: 10px;
+    width: 120px;
+    height: 160px;
+  }
+
+  .card-cotl a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .main-page-block {
+    margin-bottom: 20px;
+  }
+
+  .main-stroke-flex {
+    display: flex;
+    margin-left: 3%;
+  }
+
+  .center {
+    margin-left: -6%;
+  }
+
+  .brands-cond p {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 19px;
+    margin-left: 3%;
+    margin-top: 7%;
+  }
+
+  .brand-card {
+    position: relative;
+    margin: 5px 10px;
+    margin-top: 2%;
+    margin-left: 1%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 180px;
+    height: 140px;
+  }
+
+  .brand-card button {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 165px;
+  }
+  .brand-card button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .brand-card button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .brand-card p {
+    display: inline-flex;
+    user-select: text;
+    left: 13px;
+    top: 95px;
+    position: absolute;
+    text-align: center;
+  }
+  .brand-card img {
+    display: block;
+    display: inline-flex;
+    margin-top: -15%;
+    margin-left: 1%;
+    width: 130px;
+    height: 80px;
+  }
+
+  .brand-card a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .cond-series {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    user-select: none;
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-bottom: 5%;
+  }
+
+  .series1 {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 13px;
+    height: 50px;
+    display: inline-flex;
+    user-select: text;
+    left: 14px;
+    top: 85px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .cond-series-item {
+    position: relative;
+    margin: 1px 10px;
+    margin-top: 2%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 180px;
+    height: 140px;
+  }
+
+  .cond-series-item button {
+    position: absolute;
+    z-index: 100px;
+    bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 165px;
+    left: 5px;
+    bottom: 5px;
+  }
+
+  .cond-series-item button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .cond-series-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .cond-series-item img {
+    display: block;
+    display: inline-flex;
+    width: 160px;
+    height: 70px;
+    margin-left: -5%;
+    margin-top: -5%;
+  }
+
+  .cond-series-item a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .kent-img {
+    margin-left: 18%;
+    margin-top: 25%;
+  }
+
+  .kent-img img {
+    width: 70%;
+  }
+
+  .cotl-series {
+    margin-top: 25px;
+    display: inline-flex;
+    user-select: none;
+  }
+
+  .series {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 15px;
+    height: 50px;
+    margin-top: -2%;
+    display: inline-flex;
+    user-select: text;
+    left: 5px;
+    top: 250px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .info {
+    font-family: "Comfortaa", cursive;
+    color: black;
+    font-size: 15px;
+    height: 50px;
+    margin-top: 55px;
+    display: inline-flex;
+    user-select: text;
+    left: 1px;
+    top: -50px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .cotl-series-item {
+    position: relative;
+    margin: 5px 13px;
+    margin-top: -2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 40px;
+    width: 165px;
+    height: 310px;
+  }
+
+  .cotl-series-item button {
+    position: absolute;
+    z-index: 500px;
+    left: 5px;
+    bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 22px;
+    width: 150px;
+  }
+
+  .cotl-series-item button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .cotl-series-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .cotl-series-item img {
+    display: block;
+    display: inline-flex;
+    margin-top: 12%;
+    margin-left: -12%;
+    width: 110px;
+    height: 190px;
+  }
+
+  .cotl-series-item a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .end-p-disc {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 23px;
+  }
+
+  .soc-net {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgb(72, 178, 130);
+    border-radius: 25px;
+    border-width: 2px;
+    box-shadow: 1px 1px 2px 2px rgb(176, 176, 176);
+    width: 330px;
+    height: 350px;
+    margin-top: 70px;
+  }
+
+  .soc-net:hover {
+    background-color: rgb(249, 249, 249);
+  }
+
+  .soc-net img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .soc-net p {
+    font-size: 25px;
+    margin-top: -150px;
+  }
+
+  .tel {
+    margin-top: 200px;
+  }
+  
+  .icons {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .social a {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 34px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+  }
+
+  .viber svg {
+    margin-left: 2px;
+    margin-top: 4px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .telegram i {
+    margin-top: 8px;
+    margin-left: -5px;
+  }
+
+  .whatsapp i {
+    margin-top: -1px;
+    margin-left: 3px;
+  }
+
+  .telegram a:hover {
+    background: #249bd7;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .whatsapp a:hover {
+    background: #50b154;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .viber a:hover {
+    background: #7b519d;
+    color: #fff;
+    transition: 0.7s;
+  }
+}
+
+@media (max-width: 445px) {
+  .footer-foo a,
+  .footer-foo span {
+    font-size: 13px;
+  }
+
+  .cond-series {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .brands-cond p {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 19px;
+    margin-left: 2%;
+    margin-top: 7%;
+    text-align: center;
+  }
+
+  .main-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8%;
+  }
+
+  .brand-card {
+    position: relative;
+    margin: 5px 25px;
+    margin-top: 2%;
+    margin-left: -4%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 180px;
+    height: 140px;
+  }
+
+  .brand-card button {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 165px;
+  }
+  .brand-card button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .brand-card button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .brand-card p {
+    display: inline-flex;
+    user-select: text;
+    left: 13px;
+    top: 95px;
+    position: absolute;
+    text-align: center;
+  }
+  .brand-card img {
+    display: block;
+    display: inline-flex;
+    margin-top: -15%;
+    margin-left: 1%;
+    width: 130px;
+    height: 80px;
+  }
+
+  .brand-card a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .cond-series {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    user-select: none;
+    margin-top: 100px;
+    margin-left: 3%;
+    margin-bottom: 5%;
+  }
+
+  .series1 {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 13px;
+    height: 50px;
+    display: inline-flex;
+    user-select: text;
+    left: 14px;
+    top: 85px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .cond-series-item {
+    position: relative;
+    margin: 1px 10px;
+    margin-top: 4%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 180px;
+    height: 140px;
+  }
+
+  .cond-series-item button {
+    position: absolute;
+    z-index: 100px;
+    bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 165px;
+    left: 5px;
+    bottom: 5px;
+  }
+
+  .cond-series-item button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .cond-series-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .cond-series-item img {
+    display: block;
+    display: inline-flex;
+    width: 160px;
+    height: 70px;
+    margin-left: -5%;
+    margin-top: -5%;
+  }
+
+  .cond-series-item a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .kent-img {
+    margin-left: 18%;
+    margin-top: 30%;
+  }
+
+  .kent-img img {
+    width: 70%;
+  }
+
+  .cotl-series {
+    margin-top: 25px;
+    display: inline-flex;
+    user-select: none;
+  }
+
+  .series {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 15px;
+    height: 50px;
+    margin-top: -2%;
+    display: inline-flex;
+    user-select: text;
+    left: 5px;
+    top: 250px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .info {
+    font-family: "Comfortaa", cursive;
+    color: black;
+    font-size: 15px;
+    height: 50px;
+    margin-top: 55px;
+    display: inline-flex;
+    user-select: text;
+    left: 1px;
+    top: -50px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .cotl-series-item {
+    position: relative;
+    margin: 5px 13px;
+    margin-top: -2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 40px;
+    width: 165px;
+    height: 310px;
+  }
+
+  .cotl-series-item button {
+    position: absolute;
+    z-index: 500px;
+    left: 5px;
+    bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 22px;
+    width: 150px;
+  }
+
+  .cotl-series-item button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .cotl-series-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .cotl-series-item img {
+    display: block;
+    display: inline-flex;
+    margin-top: 12%;
+    margin-left: -12%;
+    width: 110px;
+    height: 190px;
+  }
+
+  .cotl-series-item a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .end-p-disc {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 23px;
+  }
+
+  .soc-net {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(72, 178, 130);
+    border-radius: 25px;
+    border-width: 2px;
+    box-shadow: 1px 1px 2px 2px rgb(176, 176, 176);
+    width: 250px;
+    height: 280px;
+    margin-top: 70px;
+  }
+
+  .soc-net:hover {
+    background-color: rgb(249, 249, 249);
+  }
+
+  .soc-net img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .soc-net p {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .tel {
+    margin-top: 20px;
+  }
+
+  .icons {
+    display: flex;
+    margin-top: 80px;
+  }
+
+  .social a {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 34px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+  }
+
+  .viber svg {
+    margin-left: 2px;
+    margin-top: 4px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .telegram i {
+    margin-top: 8px;
+    margin-left: -5px;
+  }
+
+  .whatsapp i {
+    margin-top: -1px;
+    margin-left: 3px;
+  }
+
+  .telegram a:hover {
+    background: #249bd7;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .whatsapp a:hover {
+    background: #50b154;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .viber a:hover {
+    background: #7b519d;
+    color: #fff;
+    transition: 0.7s;
+  }
+}
+
+@media (max-width: 400px) {
+  .image img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 413px) {
+  .main-card {
+    margin-top: 30%;
+  }
+
+  .footer-foo a,
+  .footer-foo span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 390px) {
+  .soc-net {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .phone {
+    margin-left: 0%;
+  }
+
+  .viber {
+    margin-left: 0%;
+  }
+  .whatsapp {
+    margin-left: 0%;
+  }
+  .telegram {
+    margin-left: 0%;
+  }
+}
+
+@media (max-width: 382px) {
+  .footer-foo a,
+  .footer-foo span {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 375px) {
+  .card img {
+    width: 110px;
+    margin-left: 4px;
+  }
+
+  .card button {
+    width: 120px;
+  }
+
+  .main-card {
+    margin-top: 10%;
+  }
+
+  .main-page-block {
+    margin-top: 60px;
+  }
+
+  .page1-text1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .page1-text2 {
+    margin-top: 50px;
+    font-size: 18px;
+    margin-left: -1%;
+  }
+
+  .title-name {
+    width: 300px;
+  }
+
+  .image-block {
+    width: 300px;
+    height: 200px;
+  }
+
+  .goods {
+    margin-left: -15px;
+  }
+
+  .card {
+    width: 134px;
+  }
+
+  .card-cotl {
+    position: relative;
+    margin: 5px 10px;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 4px;
+    width: 133px;
+    height: 240px;
+  }
+
+  .card-cotl button {
+    position: absolute;
+    margin-left: 0px;
+    bottom: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 120px;
+  }
+  .card-cotl button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .card-cotl button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .card-cotl p {
+    display: inline-flex;
+    user-select: text;
+    top: 13px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+  }
+  .card-cotl img {
+    display: block;
+    display: inline-flex;
+    padding-top: 10px;
+    width: 100px;
+    height: 160px;
+  }
+
+  .card-cotl a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .main-card {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    user-select: none;
+    margin-left: 10%;
+  }
+
+  .brands-cond p {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 19px;
+    margin-left: 2%;
+    margin-top: 7%;
+    text-align: center;
+  }
+
+  .brand-card {
+    position: relative;
+    margin: 5px 29px;
+    margin-top: 2%;
+    margin-left: -6%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 160px;
+    height: 140px;
+  }
+
+  .brand-card button {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 18px;
+    width: 147px;
+  }
+  .brand-card button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .brand-card button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .brand-card p {
+    display: inline-flex;
+    user-select: text;
+    left: 13px;
+    top: 95px;
+    position: absolute;
+    text-align: center;
+  }
+  .brand-card img {
+    display: block;
+    display: inline-flex;
+    margin-top: -15%;
+    margin-left: 1%;
+    width: 130px;
+    height: 80px;
+  }
+
+  .brand-card a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .cond-series {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    user-select: none;
+    margin-top: 100px;
+    margin-bottom: 5%;
+  }
+
+  .series1 {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 13px;
+    height: 50px;
+    display: inline-flex;
+    user-select: text;
+    left: 14px;
+    top: 85px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .cond-series-item {
+    position: relative;
+    margin: 1px 10px;
+    margin-top: 4%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 160px;
+    height: 140px;
+  }
+
+  .cond-series-item button {
+    position: absolute;
+    z-index: 100px;
+    bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 18px;
+    width: 145px;
+    left: 5px;
+    bottom: 5px;
+  }
+
+  .cond-series-item button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .cond-series-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .cond-series-item img {
+    display: block;
+    display: inline-flex;
+    width: 140px;
+    height: 70px;
+    margin-left: -5%;
+    margin-top: -5%;
+  }
+
+  .cond-series-item a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .kent-img {
+    margin-left: 18%;
+    margin-top: 35%;
+  }
+
+  .kent-img img {
+    width: 70%;
+  }
+
+  .cotl-series {
+    margin-top: 25px;
+    display: inline-flex;
+    user-select: none;
+  }
+
+  .series {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 14px;
+    height: 50px;
+    margin-top: -2%;
+    display: inline-flex;
+    user-select: text;
+    left: 5px;
+    top: 240px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .info {
+    font-family: "Comfortaa", cursive;
+    color: black;
+    font-size: 14px;
+    height: 50px;
+    margin-top: 55px;
+    display: inline-flex;
+    user-select: text;
+    left: 1px;
+    top: -50px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .cotl-series-item {
+    position: relative;
+    margin: 5px 13px;
+    margin-top: -2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 40px;
+    width: 155px;
+    height: 300px;
+  }
+
+  .cotl-series-item button {
+    position: absolute;
+    z-index: 500px;
+    left: 5px;
+    bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 140px;
+  }
+
+  .cotl-series-item button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .cotl-series-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .cotl-series-item img {
+    display: block;
+    display: inline-flex;
+    margin-top: 10%;
+    margin-left: -27%;
+    width: 110px;
+    height: 190px;
+  }
+
+  .cotl-series-item a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .end-p-disc {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 23px;
+  }
+
+  .soc-net {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(72, 178, 130);
+    border-radius: 25px;
+    border-width: 2px;
+    box-shadow: 1px 1px 2px 2px rgb(176, 176, 176);
+    width: 250px;
+    height: 280px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  .soc-net:hover {
+    background-color: rgb(249, 249, 249);
+  }
+
+  .soc-net img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .soc-net p {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .tel {
+    margin-top: 20px;
+  }
+
+  .icons {
+    display: flex;
+    margin-top: 80px;
+  }
+
+  .social a {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 34px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+  }
+
+  .viber svg {
+    margin-left: 2px;
+    margin-top: 4px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .telegram i {
+    margin-top: 8px;
+    margin-left: -5px;
+  }
+
+  .whatsapp i {
+    margin-top: -1px;
+    margin-left: 3px;
+  }
+
+  .telegram a:hover {
+    background: #249bd7;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .whatsapp a:hover {
+    background: #50b154;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .viber a:hover {
+    background: #7b519d;
+    color: #fff;
+    transition: 0.7s;
+  }
+}
+
+@media (max-width: 366px) {
+  .footer-foo a,
+  .footer-foo span {
+    font-size: 10px;
+  }
+
+  .page1-text1 {
+    text-align: center;
+    margin-left: -1%;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .footer-foo a,
+  .footer-foo span {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .main-card {
+    margin-top: 10%;
+  }
+
+  .main-bg1 {
+    margin-top: 100px;
+    width: 100%;
+    height: 230px;
+  }
+
+  .page1-text1 {
+    text-align: center;
+    margin-left: 7%;
+    font-size: 20px;
+  }
+
+  .page1-text2 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    color: rgb(72, 178, 130);
+  }
+
+  .card-cotl {
+    position: relative;
+    margin: 5px 10px;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 4px;
+    width: 108px;
+    height: 240px;
+  }
+
+  .card-cotl button {
+    position: absolute;
+    margin-left: 0px;
+    bottom: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 98px;
+  }
+  .card-cotl button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .card-cotl button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .card-cotl p {
+    display: inline-flex;
+    user-select: text;
+    top: 5px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+  }
+  .card-cotl img {
+    display: block;
+    display: inline-flex;
+    padding-top: 10px;
+    margin-top: -10px;
+    width: 100px;
+    height: 160px;
+    margin-left: -2px;
+  }
+
+  .card-cotl a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .card {
+    position: relative;
+    margin: 5px 10px;
+    margin-top: 10px;
+    margin-left: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 4px;
+    width: 114px;
+    height: 140px;
+  }
+
+  .card button {
+    position: absolute;
+    padding-left: 10px;
+    bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 20px;
+    width: 104px;
+    font-size: 10px;
+  }
+  .card button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .card button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .card p {
+    display: inline-flex;
+    user-select: text;
+    left: 5px;
+    top: 85px;
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+  }
+  .card img {
+    display: block;
+    display: inline-flex;
+    padding-top: 10px;
+    width: 110px;
+    height: 60px;
+    margin-left: -3px;
+  }
+
+  .card a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .image-block {
+    width: 250px;
+  }
+
+  .title-name {
+    width: 250px;
+  }
+
+  .main-card {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    user-select: none;
+    margin-left: 10%;
+  }
+
+  .brands-cond p {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 19px;
+    margin-left: 2%;
+    margin-top: 7%;
+    text-align: center;
+  }
+
+  .brand-card {
+    position: relative;
+    margin: 1px 26px;
+    margin-top: 2%;
+    margin-left: -8%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 140px;
+    height: 130px;
+  }
+
+  .brand-card button {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 16px;
+    width: 130px;
+  }
+  .brand-card button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .brand-card button:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+  .brand-card p {
+    display: inline-flex;
+    user-select: text;
+    left: 13px;
+    top: 90px;
+    position: absolute;
+    text-align: center;
+  }
+  .brand-card img {
+    display: block;
+    display: inline-flex;
+    margin-top: -15%;
+    margin-left: 1%;
+    width: 100px;
+    height: 75px;
+  }
+
+  .brand-card a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .cond-series {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    user-select: none;
+    margin-top: 100px;
+    margin-bottom: 5%;
+  }
+
+  .series1 {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 11px;
+    height: 50px;
+    display: inline-flex;
+    user-select: text;
+    left: 14px;
+    top: 75px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .cond-series-item {
+    position: relative;
+    margin: 1px 10px;
+    margin-top: 4%;
+    margin-left: 1%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 15px;
+    width: 135px;
+    height: 125px;
+  }
+
+  .cond-series-item button {
+    position: absolute;
+    z-index: 100px;
+    bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 16px;
+    width: 125px;
+    left: 5px;
+    bottom: 5px;
+  }
+
+  .cond-series-item button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .cond-series-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .cond-series-item img {
+    display: block;
+    display: inline-flex;
+    width: 120px;
+    height: 50px;
+    margin-left: -10%;
+    margin-top: -5%;
+  }
+
+  .cond-series-item a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .kent-img {
+    margin-left: 18%;
+    margin-top: 42%;
+  }
+
+  .kent-img img {
+    width: 70%;
+  }
+
+  .cotl-series {
+    margin-top: 25px;
+    display: inline-flex;
+    user-select: none;
+  }
+
+  .series {
+    font-family: "Comfortaa", cursive;
+    color: rgb(72, 178, 130);
+    font-size: 14px;
+    height: 50px;
+    margin-top: -2%;
+    display: inline-flex;
+    user-select: text;
+    left: 5px;
+    top: 220px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .info {
+    font-family: "Comfortaa", cursive;
+    color: black;
+    font-size: 12px;
+    height: 50px;
+    margin-top: 55px;
+    display: inline-flex;
+    user-select: text;
+    left: 1px;
+    top: -50px;
+    position: absolute;
+    text-align: center;
+  }
+
+  .cotl-series-item {
+    position: relative;
+    margin: 5px 13px;
+    margin-top: -2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgb(72, 178, 130);
+    border-style: solid;
+    border-width: 0.1pc;
+    padding: 40px;
+    width: 130px;
+    height: 270px;
+  }
+
+  .cotl-series-item button {
+    position: absolute;
+    z-index: 500px;
+    left: 5px;
+    bottom: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: table;
+    background-color: rgb(72, 178, 130);
+    border-color: rgb(72, 178, 130);
+    border-width: 1px;
+    border-radius: 6px;
+    height: 18px;
+    width: 120px;
+  }
+
+  .cotl-series-item button:active {
+    background-color: rgba(91, 201, 151);
+    border-color: rgba(91, 201, 151);
+    transition: color 0s;
+  }
+  .cotl-series-item:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .cotl-series-item img {
+    display: block;
+    display: inline-flex;
+    margin-top: 10%;
+    margin-left: -40%;
+    width: 90px;
+    height: 170px;
+  }
+
+  .cotl-series-item a {
+    font-family: "Comfortaa", cursive;
+    text-decoration: none;
+    color: white;
+  }
+
+  .end-p-disc {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 18px;
+  }
+
+  .soc-net {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(72, 178, 130);
+    border-radius: 25px;
+    border-width: 2px;
+    box-shadow: 1px 1px 2px 2px rgb(176, 176, 176);
+    width: 210px;
+    height: 230px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  .soc-net:hover {
+    background-color: rgb(249, 249, 249);
+  }
+
+  .soc-net img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .soc-net p {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .tel {
+    margin-top: 10px;
+  }
+
+  .icons {
+    display: flex;
+    margin-top: 60px;
+  }
+
+  .social a {
+    text-align: center;
+    width: 55px;
+    height: 55px;
+    float: left;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    border-radius: 34px;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    color: #000;
+  }
+
+  .viber svg {
+    margin-left: 1px;
+    margin-top: 3px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .telegram i {
+    margin-top: 6px;
+    margin-left: -7px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp i {
+    margin-top: -4px;
+    margin-left: 3px;
+  }
+
+  .telegram a:hover {
+    background: #249bd7;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .whatsapp a:hover {
+    background: #50b154;
+    color: #fff;
+    transition: 0.7s;
+  }
+  .viber a:hover {
+    background: #7b519d;
+    color: #fff;
+    transition: 0.7s;
+  }
+
+  .prices-main p {
+    font-size: 15px;
+  }
+
+  .prices-main button {
+    width: 210px;
+    height: 40px;
+    margin-top: 40px;
+  }
+}

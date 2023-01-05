@@ -1,0 +1,3 @@
+User-agent: Yandex
+
+Sitemap: http://antaki.ru/sitemap.xml
